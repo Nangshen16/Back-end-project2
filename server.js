@@ -8,6 +8,9 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const receipeRouter = require('./routes/Receipe.js')
+const GorceryRouter = require("./routes/Gorcery.js")
+
 
 /////////////////////////////
 ///////GLOBAL VARIABLES//////
@@ -51,7 +54,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
     res.send("This server is running like it should")
 })
-
+app.use("/receipes",receipeRouter)
 //////////////////////
 ///////LISTENER///////
 //////////////////////
