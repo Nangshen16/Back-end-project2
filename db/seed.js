@@ -1,8 +1,8 @@
-const Gorcery = require('../models/Gorcery')
+/*const Grocery = require('../models/Grocery')
 const Receipe = require('../models/Receipe')
 
-Gorcery.find({}).remove(() =>{
+Grocery.find({}).remove(() =>{
     Receipe.find({}).remove(()=>{
         let 
     })
-})
+})*/

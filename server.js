@@ -8,8 +8,8 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const receipeRouter = require('./routes/Receipe.js')
-const GorceryRouter = require("./routes/Gorcery.js")
+const shoppingcartRouter = require('./routes/Shoppingcart.js')
+const groceryRouter = require("./routes/Grocery.js")
 
 
 /////////////////////////////
@@ -54,7 +54,8 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
     res.send("This server is running like it should")
 })
-app.use("/receipes",receipeRouter)
+app.use("/shoppingcart",shoppingcartRouter)
+app.use('/grocery',groceryRouter)
 //////////////////////
 ///////LISTENER///////
 //////////////////////

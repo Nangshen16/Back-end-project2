@@ -1,7 +1,7 @@
-const express = require ('express')
+const express = require ("express")
 const router = express.Router()
 
-const {index,create,update,destroy} = require('../controllers/Receipe.js')
+const {index,create,update,destroy} = require('../controllers/Grocery.js')
 
 router.get("/",index);
 router.post("/",create);
