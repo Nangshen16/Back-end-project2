@@ -19,7 +19,7 @@ const create = async (req, res) => {
         console.log(newGrocery)
         res.status(201).json(newGrocery)
     } catch(error) {
-        res.status(400).json(error)
+        res.status(400).send(error)
     }}
    
     const update = async (req,res) => {
