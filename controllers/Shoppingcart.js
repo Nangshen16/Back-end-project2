@@ -25,13 +25,13 @@ const create = async (req, res) => {
  const update = async (req,res) => {
      console.log(req.params.name,req.body)
      try {
-         const Shoppingcart = await Shoppingcart.findOne({name: req.params.name})
+         const shoppingcart = await Shoppingcart.findOne({name: req.params.name})
          //take the existing shopping cart data
          
          const newData = {
-             name: Shoppingcart.name,
+             name: shoppingcart.name,
              //add the selected ingredient to the ingredients list for this cart
-             ingredients: Shoppingcart.ingredients.concat(req.body)
+             ingredients: shoppingcart.ingredients.concat(req.body)
          }
          const updatedShoppingcart = await Shoppingcart.findOneAndUpdate(shoppingcart.id,newData)
          res.status(200).json(updatedShoppingcart)
