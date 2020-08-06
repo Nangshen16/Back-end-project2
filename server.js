@@ -17,6 +17,7 @@ const groceryRouter = require("./routes/Grocery.js")
 /////////////////////////////
 
 const PORT = process.env.PORT;
+
 const NODE_ENV = process.env.NODE_ENV;
 const mongoURI = process.env.mongoURI + "Ecommerce"
 const db = mongoose.connection;
@@ -42,7 +43,8 @@ const corsOptions = {
   },
 };
 
-NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions));
+//NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions));
+app.use(cors())
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("public"));
