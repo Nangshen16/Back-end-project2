@@ -5,7 +5,7 @@ const {index,create,update,destroy} = require('../controllers/Shoppingcart.js')
 
 router.get("/",index);
 router.post("/",create);
-router.put("/:id",update);
+router.put("/:name",update);
 router.delete("/:id",destroy);
 
 

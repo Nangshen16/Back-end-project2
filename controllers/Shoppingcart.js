@@ -6,7 +6,7 @@ const Shoppingcart = require('../models/Shoppingcart')
 
 const index = async (req,res) => {
     try {
-        const allShoppingcart = await Shoppingcart.find()
+        const allShoppingcart = await Shoppingcart.find().populate('ingredients')
         res.status(200).json(allShoppingcart)
     }catch (error){
         res.status(400).json(error)
@@ -23,8 +23,17 @@ const create = async (req, res) => {
  }}
 
  const update = async (req,res) => {
+     console.log(req.params.name,req.body)
      try {
-         const updatedShoppingcart= await Shoppingcart.findByIdAndUpdate(req.params.id,req.body,{new:true})
+         const Shoppingcart = await Shoppingcart.findOne({name: req.params.name})
+         //take the existing shopping cart data
+         
+         const newData = {
+             name: Shoppingcart.name,
+             //add the selected ingredient to the ingredients list for this cart
+             ingredients: Shoppingcart.ingredients.concat(req.body)
+         }
+         const updatedShoppingcart = await Shoppingcart.findOneAndUpdate(shoppingcart.id,newData)
          res.status(200).json(updatedShoppingcart)
      } catch(error) {
          res.status(400).send(error)
@@ -40,5 +49,6 @@ const create = async (req, res) => {
          res.status(400).send(error)
      }
  };
+
 
  module.exports = {index,create,update,destroy}

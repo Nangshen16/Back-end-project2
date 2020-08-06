@@ -40,6 +40,8 @@ const create = async (req, res) => {
             res.status(400).send(error)
         }
     };
+
+    
    
     module.exports = {index,create,update,destroy}
 
