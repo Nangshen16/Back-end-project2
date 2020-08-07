@@ -23,6 +23,10 @@ Grocery.create(
          {
              Name: "Squid",
              Price: 10
+         },
+         {
+             Name: "Branzino",
+             Price: 25
          }
          
     ]
