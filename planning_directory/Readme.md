@@ -9,101 +9,125 @@ This schedule will be used to keep track of your progress throughout the week an
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
-|---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Incomplete
-|Day 2| Working RestAPI | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches and Present | Incomplete
+|-----|----------------------------------------------| ----------|
+|Day 1 - Friday | Pre-work: Project Description                          | Complete
+|Day 1 - Friday | Pre-work: Wireframes / Priority Matrix / Timeline      | Complete
+|Day 2 - Saturday | Start backend logic                                  | Complete
+|Day 3 - Sunday | Complete backend and test                              | Complete
+
+Project Schedule continued in [Frontend](https://github.com/Nangshen16/Front-end-project2)
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Link to final [project](https://project2rachel.herokuapp.com/)
 
-I will be attempting to create a roster generator for a basketball team's website. It will consist of a form where information on each player can be filled out and then displayed in a seprate section where all added members of the team will be. I will be using CRUD methods to create, read, update and delete players on the roster using a full stack applications.
-
-## Google Sheet
-
-Include link to your google sheet here.  Here is the sample [Suresh had used in class](https://docs.google.com/spreadsheets/d/1V1M3Eq1NXH2PNmeTlVviRhEjX9kenq769Vo2P5mMtro/edit#gid=0) 
-
-## Wireframes
-
- mobile:
-https://res.cloudinary.com/dcrioc0sw/image/upload/v1596903482/117190395_702364720343769_3258366353163671472_n_m2lgjs.jpg
-
-
-desktop:
-https://res.cloudinary.com/dcrioc0sw/image/upload/v1596903539/117391328_2759925677665947_4499860696634054612_n_y2ggjm.jpg
-
-
-## Time/Priority Matrix 
-
-link:
-https://res.cloudinary.com/dcrioc0sw/image/upload/v1596903573/116840024_737708347011306_7629405577313083079_n_pjd1or.jpg
-
-
-### MVP/PostMVP - 5min
+Introducing, Our Unit-2 project for General Assembly's SEI program.
+     For Project 12, I will be creating a fullstack website for mygorcerystore.
+ The backend will include:
+  * a Schema for gorceryingredients and shoppingcart.
+ * The ability to Create, Read, Update, and Destroy a ingredient or shoppingcart
+ 
+ ## Wireframes for Schemas
+```
+  ShoppingcartSchema
+  {
+  Name: String,
+    Price : Number
+    }
+     ingredientSchema
+     {
+     name: String,
+    ingredients:[{type: Schema.Types.ObjectId,ref:"Grocery"}]
+    }
+    
+    ### MVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### MVP (examples)
-
-- Pull data using google json api
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
-
-#### PostMVP 
-
-- Anything else that is not MVP
+*  Create controllers for shoppingCart
+    * Read all shoppingCart
+   * find shoppingCart by name
+   * find shoppingCart by price
+   
+   * update shoppingCart info
+   * create shoppingCart
+   * delete shoppingCart
+  
+* Create controllers for ingredients
+   *  Read all ingredients
+   * find ingredients by name
+   * find ingredients by price
+   * Create ingredients
+   * Update newingredients
+   * delete ingredients
+  
+  
 
 ## Functional Components
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions.  Try and capture what logic would need to be defined if the list was broken down into the following categories.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the ingrdients.  
+I've broken down each part of the backend to smaller tasks below.
 
 #### MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 1hr | 1.5hr | -hr|
-| Project Previews | H | 3hr | -hr | -hr|
-| Regular Nav | H | H | -hr | -hr|
-| Adding Form | H | 1.5hr| -hr | -hr |
-| Other sections and flex| M | 4hr | 2hr | -hr|
-| Working with API | H | 3hrs| 2hr | -hr |
-| Responsive | H | 3hr | -hr | -hr|
-| Social Media Icons | L | 1hr | -hr | -hr|
-| Total | H | 15.5hrs| -hrs | -hrs |
 
-#### PostMVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Project Hover | L | 3hr | -hr | -hr|
-| Banner letters wiggle | L | 1hr | -hr | -hr|
-| Interactive Banner | M | 4hr | -hr | -hr|
-| Materialize | H | 4hr | -hr | -hr|
-| Bootstrap | H | 4hr | -hr | -hr|
-| Make own icon | L | 4hr | -hr | -hr|
-| Total | H | 20hrs| -hrs | -hrs |
+| Component                                  | Priority | Estimated Time | Time Invested  | Actual Time |
+| ---                                        | :---:    |  :---:         | :---:          | :---:       |
+| Initial Setup/ boilerplate code            | H        | 1hr            | .5hr            | -hr         |
+| Seed Data                                  | H        | 1hr            | 9hr            | -hr         |
+| Create Models for ingredients                | H        | 1hr            | .5hr            | -hr         |
+| Create Models for shoppingcart                 | H        | 1hr            | .5hr            | -hr         |
+| Create Controller for ingredients            | H        | 1hr            | 1hr            | -hr         |
+| Create Controller for shoppingcart              | H        | 1hr            | 15hr            | -hr         |
+| Create Routes for ingredients                | H        | 1hr            | .5hr            | -hr         |
+| Create Routes for shoppingcart                  | H        | 1hr            | .5hr            | -hr         |
+| Test routes for ingredients                   | H        | 2hr            | 2hr            | -hr         |
+| Test routes for shoppingcart                   | H        | 2hr            | 2hr            | -hr         |
+| Deploy on Heroku                           | H        | 1hr            | 12hr            | -hr         |
+| Total                                      |          | 14hrs          | 43.5hr            | -hr         |
+
+
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ This section lists all supporting libraries and their role in the project.
+ * [express](http://expressjs.com/) - A framework for bode that allows users to write handlers for requests with different HTTP verbs at different URL paths (routes)
+ * [mongoose](https://mongoosejs.com/docs/2.7.x/index.html) - An Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+ * [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) - a node package for providing a [Connect](https://github.com/senchalabs/connect#readme)/[Express](http://expressjs.com/) middleware that can be used to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (cross-origin resource sharing) with various options. It is used for security.
+ * [dotenv](https://www.npmjs.com/package/dotenv) - A module that loads environment variables used for configuration
+ * [morgan](https://www.npmjs.com/package/morgan) - A HTTP request logger middleware for node.js
+
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
-
-## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
-
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+This section will include a brief code snippet of functionality that I am proud of and a brief description  
+const index = async (req,res) => {
+    try {
+        const allShoppingcart = await Shoppingcart.find().populate('ingredients')
+        res.status(200).json(allShoppingcart)
+    }catch (error){
+        res.status(400).json(error)
+    }
+    
+} 
+const update = async (req,res) => {
+     console.log(req.params.name,req.body)
+     try {
+         const shoppingcart = await Shoppingcart.findOne({name: req.params.name})
+         //take the existing shopping cart data
+         
+         const newData = {
+             name: shoppingcart.name,
+             //add the selected ingredient to the ingredients list for this cart
+             ingredients: shoppingcart.ingredients.concat(req.body)
+         }
+         const updatedShoppingcart = await Shoppingcart.findOneAndUpdate(shoppingcart.id,newData)
+         res.status(200).json(updatedShoppingcart)
+     } catch(error) {
+         res.status(400).send(error)
+     }
+ }
+ 
+ ## Issues and Resolutions
+ This section will list all major issues encountered and their resolution.
+ 
+ I was having trouble with creating api and stuck with api for long time and it was very complicated to link api and front end . Creating JQuery was one of my weakest.
+ Instead of using //NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions));
+I use app.use(cors()) to link api and front end.
